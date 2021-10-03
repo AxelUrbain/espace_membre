@@ -27,7 +27,7 @@
                 </div>
             </div>
             <div class="mb-3">
-                <label for="InputPassword" class="form-label">Password</label>
+                <label for="InputPassword" class="form-label">Change password</label>
                 <input type="password" name="password" class="form-control" id="InputPassword" value="<?php echo $profil->password; ?>" required>
                 <div class="form-text">
                     <p>At least 8 alphanumeric characters for the password</p>

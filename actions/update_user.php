@@ -11,7 +11,9 @@ if(!empty($email) && !empty($password) && !empty($name) && !empty($firstname)){
         echo "Erreur dans la saisie du mot de passe !";
     }
     else{
-        App::getDatabase()->query("UPDATE users SET name= ?, firstname= ?, password= ? WHERE email = ?", [$name, $firstname, $password, $email]);
+        $hashed_password = password_hash($password, PASSWORD_DEFAULT);
+
+        App::getDatabase()->query("UPDATE users SET name= ?, firstname= ?, password= ? WHERE email = ?", [$name, $firstname, $hashed_password, $email]);
 
         echo "ok";
     }

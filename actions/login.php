@@ -5,9 +5,10 @@ extract($_POST);
 
 if(isset($email) && isset($password))
 {
-    $response =  App::getDatabase()->query("SELECT * FROM users WHERE email= ? AND password= ?", [$email, $password])->fetch();
+    $response =  App::getDatabase()->query("SELECT * FROM users WHERE email= ?", [$email])->fetch();
 
-    if($response){
+    if($response && password_verify($password, $response->password)){
+        $response->password = "";
         $_SESSION['account'] = $response;
         echo "ok";
     }

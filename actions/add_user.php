@@ -17,9 +17,11 @@ if(!empty($email) && !empty($password) && !empty($name) && !empty($firstname)){
             echo "Cette adresse mail est déjà utilisée !";
         }
         else{
+            $hashed_password = password_hash($password, PASSWORD_DEFAULT);
+
             App::getDatabase()
             ->query("INSERT INTO users SET email= ?, name= ?, firstname= ?, password= ?", 
-                [$email, $name, $firstname, $password]);
+                [$email, $name, $firstname, $hashed_password]);
 
             echo "ok";
         }
