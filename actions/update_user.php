@@ -1,5 +1,5 @@
 <?php 
-require_once 'inc/bootstrap.php';
+require_once '../inc/autoloader.php';
 session_start();
 extract($_POST);
 

@@ -41,38 +41,7 @@ include("../../inc/menu.php");
 </div>
 
 
-<script type="text/javascript">
-    $(function(){
-        $("#register-success").empty().hide();
-        $("#register-error").empty().hide();
-      
-        $("#register-form").submit(function(){
-            email = $(this).find("input[name=email]").val();
-            password = $(this).find("input[name=password]").val();
-            name = $(this).find("input[name=name]").val();
-            firstname = $(this).find("input[name=firstname]").val();
-
-            $.post("../../add_user.php", {email: email, password: password, name: name, firstname: firstname}, function(data){
-                if(data != "ok"){
-                    $("#register-success").empty().hide();
-
-                    $("#register-error").show("", function(){
-                        $(this).empty().append(data);
-                    });
-                }
-                else{
-                    $("#register-error").empty().hide();
-
-                    $("#register-success").show("", function(){
-                        $(this).empty().append("Vous êtes enregistré !");
-                    })
-                }
-            });
-
-            return false;
-    });
-});
-</script>
+<script src="../js/add_user.js" type="text/javascript"></script>
 
 <?php
 include("../../inc/footer.php");
