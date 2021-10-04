@@ -19,7 +19,7 @@ $(function(){
                 $("#login-error").empty().hide();
 
                 $("#login-success").show("", function(){
-                    $(this).empty().append("Vous êtes connecté !");
+                    $(this).empty().append("You are connected !");
                     location.reload();
                 })
             }

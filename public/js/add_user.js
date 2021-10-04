@@ -20,7 +20,7 @@ $(function(){
                 $("#register-error").empty().hide();
 
                 $("#register-success").show("", function(){
-                    $(this).empty().append("Vous êtes enregistré !");
+                    $(this).empty().append("You are now registered !");
                 })
             }
         });

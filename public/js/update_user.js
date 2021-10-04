@@ -20,7 +20,7 @@ $(function(){
                 $("#modify-error").empty().hide();
 
                 $("#modify-success").show("", function(){
-                    $(this).empty().append("Vous avez modifié votre profil !");
+                    $(this).empty().append("You've changed your profile !");
                 })
             }
         });

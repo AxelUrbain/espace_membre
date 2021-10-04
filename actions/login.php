@@ -13,9 +13,9 @@ if(isset($email) && isset($password))
         echo "ok";
     }
     else{
-        echo "Erreur, veuillez vérifier votre nom d'utilisateur et votre mot de passe !";   
+        echo "Error, please check your username and password !";   
     }
 }
 else{
-    echo "Vous n'avez saisie tout les champs !";
+    echo "You have not entered all the fields !";
 }

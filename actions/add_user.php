@@ -8,13 +8,13 @@ if(!empty($email) && !empty($password) && !empty($name) && !empty($firstname)){
     $result = preg_match("/([^A-Za-z0-9\s])/", $password);
 
     if($result || strlen($password) < 8 ){
-        echo "Erreur dans la saisie du mot de passe !";
+        echo "Incorrect password entry !";
     }
     else{
         $response = App::getDatabase()->query("SELECT COUNT(email) AS is_doublon FROM users WHERE email = ?", [$email])->fetch();
 
         if($response->is_doublon != 0){
-            echo "Cette adresse mail est déjà utilisée !";
+            echo "Email address already used !";
         }
         else{
             $hashed_password = password_hash($password, PASSWORD_DEFAULT);
@@ -28,5 +28,5 @@ if(!empty($email) && !empty($password) && !empty($name) && !empty($firstname)){
     }
 }
 else{
-    echo "Vous n'avez saisie tout les champs correctement !";
+    echo "You have not entered all the fields correctly !";
 }
