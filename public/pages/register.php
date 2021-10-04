@@ -23,7 +23,7 @@ include("../../inc/menu.php");
                     <input type="text" name="firstname" class="form-control" id="InputFirstname" required>
                 </div>
                 <div class="col-6">
-                    <label for="InputName" class="form-label">Name</label>
+                    <label for="InputName" class="form-label">Lastname</label>
                     <input type="text" name="name" class="form-control" id="InputName" required> 
                 </div>
             </div>

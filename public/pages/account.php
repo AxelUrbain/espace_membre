@@ -22,7 +22,7 @@
                     <input type="text" name="firstname" class="form-control" id="InputFirstname" value="<?php echo $profil->firstname; ?>" required>
                 </div>
                 <div class="col-6">
-                    <label for="InputName" class="form-label">Name</label>
+                    <label for="InputName" class="form-label">Lastname</label>
                     <input type="text" name="name" class="form-control" id="InputName" value="<?php echo $profil->name; ?>" required>
                 </div>
             </div>
